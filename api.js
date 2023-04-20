@@ -12,7 +12,7 @@ app.use(
 )
 
 app.get('/', (request, response) => {
-    response.json({ info: 'API working' })
+    response.json({ info: 'API online' })
 })
 
 app.get('/monsters/:id', db.getMonsterById)
