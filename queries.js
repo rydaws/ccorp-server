@@ -15,7 +15,7 @@ const pool = new Pool({
  * Gets monster by ID to return
  *
  * @param request
- * @param response - the json monster data
+ * @param response - the json monster data.
  */
 const getMonsterById = (request, response) => {
     const id = parseInt(request.params.id)
