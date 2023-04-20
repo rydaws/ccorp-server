@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const db = require('./queries')
 const app = express()
 const port = 3000
 
@@ -13,6 +14,8 @@ app.use(
 app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
 })
+
+app.get('/monsters/:id', db.getMonsterById)
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
